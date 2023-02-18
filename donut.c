@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     float A = 0, B = 0, i, j, z[1760];
     char b[1760];
     printf("\n1b[2J");
-    for (;;)
+    while (1)
     {
         memset(b, 32, 1760);
         memset(z, 0, 7040);
@@ -26,20 +26,20 @@ int main(int argc, char const *argv[])
                     y = 12 + 15 * D * (l * h * n + t * m), o = x + 80 * y,
                     N = 8 * ((f * e - c * d * g) * m - c * d * e - f * g - l * d * n);
 
-                if (22 > y && y > 0 && 80 > x && x > 0 && D > z[o])
+                if (22 > y && y > 0 && x < 80 && x > 0 && D > z[o])
                 {
                     z[o] = D;
                     b[o] = ".,-~:;=!*#$@:"[N > 0 ? N : 0];
                 }
             }
         }
-         printf("\x1b[H");
-            for (k = 0; 1761 > k; k++)
-            {
-                putchar(k % 80 ? b[k] : 10);
-            }
-            A += 0.04;
-            B += 0.02;
+        printf("\x1b[H");
+        for (k = 0; 1761 > k; k++)
+        {
+            putchar(k % 80 ? b[k] : 10);
+        }
+        A += 0.04;
+        B += 0.02;
     }
 
     return 0;
